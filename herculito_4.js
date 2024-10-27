@@ -1,12 +1,14 @@
 function herculito(array) {
   let totalStones = 0;
   let lastHeight = null;
+
   for (let i = 0; i < array.length; i++) {
     if (lastHeight && lastHeight > array[i]) {
       totalStones += (lastHeight - array[i]) / 10 + 1;
     }
     lastHeight = array[i];
   }
+
   console.log(totalStones);
   return totalStones;
 }
