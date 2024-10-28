@@ -1,18 +1,34 @@
+/*
+total < 1000
+n < b*2
+b < r < n
+777 * b + r + n = b * r * n
+*/
+
 function herculito() {
-  let b = 3;
-  let r = 4;
-  let n = 5;
+  let b = 1;
+  let r = 2;
+  let n = 3;
 
-  while ( ) {
+  while (b + r + n < 1000) {
     let total = b + r + n;
+    let multiple = b * r * n;
     const limit = 777 * total;
-    if (b * r * n < limit) {
-      b *= 3;
-      r *= 3;
-      n *= 3;
+    if (multiple < limit) {
+      b += 1;
+      r += 2;
+      n += 3;
+    } else {
+      break;
     }
+    console.log("blancs", b);
+    console.log("roux", r);
 
-    console.log(total);
+    console.log("noirs", n);
+
+    console.log("boeufs", total);
+    console.log("multiple", multiple);
+    console.log("limit", limit);
   }
 }
 
