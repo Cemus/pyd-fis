@@ -14,12 +14,11 @@ function herculito() {
     let total = b + r + n;
     let multiple = b * r * n;
     const limit = 777 * total;
-    if (multiple < limit) {
+    if (multiple > limit) {
       b += 1;
       r += 2;
       n += 3;
     } else {
-      break;
     }
     console.log("blancs", b);
     console.log("roux", r);
